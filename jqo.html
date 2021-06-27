@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Φόρμα Επικοινωνίας</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script charset="utf-8">
+        function sendmessage(){
+    //this is the original function before obfuscation https://obfuscator.io/ on MEDIUM
+            var chat_id = "YOUR_GROUP_ID";
+            var token = "YOUR_TELEGRAM_BOT_API_TOKEN";
+            //chat_id = document.getElementById("chat_id").value;
+            //token = document.getElementById("token").value;
+            name = document.getElementById(encodeURIComponent("name")).value;
+            email = document.getElementById(encodeURIComponent("email")).value;
+            telegram = document.getElementById(encodeURIComponent("telegram")).value;
+            comment = document.getElementById(encodeURIComponent("comment")).value;
+            identity = document.getElementById(encodeURIComponent("identity")).value;
+            user_ip = document.getElementById(encodeURIComponent("user_ip")).value;
+            _n = encodeURIComponent("\n");
+            _b1 = encodeURIComponent("<strong>"); 
+            _b2 = encodeURIComponent("</strong>");
+            _ = encodeURIComponent(" _ ");
+            _ip1 = encodeURIComponent('IP:<a href="https://ipgeolocation.io/ip-location/');
+            _ip2 = document.getElementById("user_ip").value;
+            _ip3 = encodeURIComponent('">');
+            _ip4 = encodeURIComponent("</a>");
+            _p1 = encodeURIComponent("<pre>");
+            _p2 = encodeURIComponent("</pre>");
+            cmd_pre = encodeURIComponent("");
+            message = _b1 + identity + _b2 + _n + _p1 + name + email + _p2 + _n + _p1 + email + _p2 + _n + telegram + _n + cmd_pre + comment + _n + _ip1 + _ip2 + _ip3 + _ip2 + _ip4 + _n ;
+            $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id+"&parse_mode=HTML&disable_web_page_preview=True");
+        }
+    </script>
+    <script>// Παρακαλώ περιμένετε script
+        $(function() {
+        $('#theForm').submit(function() {
+        $('#someHiddenDiv').show();
+        $.ajax({
+            url: this.action,
+            type: this.method,
+            data: $(this).serialize(),
+            success: function() {
+                $('#someHiddenDiv').hide();
+            }
+        });
+        return false;
+        });
+        });
+    </script>
+    <script>// reload page script μετά από submit, κόβει το πράσινο -με επιτυχία- text, κλάιν
+        window.onload=function() {
+            document.getElementById("theForm").onsubmit=function() {
+            window.location.replace("jq.html");
+            return false;
+            }
+        }
+        //window.onload = setTimeout(window.onload=function, 4000); // doesn't work, but it should if i get into it :P
+    </script>
+    <script>// JavaScript popup message script
+        function noticeButton() {
+            alert("Το μήνυμά σας εστάλει με επιτυχία!");
+        }
+    </script>
+    <style>/* OnPage εστάλει μήνυμα style */
+        #progress { 
+            display: none;
+            color: green; 
+        }
+    </style>     
+</head>
+<body>
+<div class="container">
+    <form id="theForm" class="m-auto" style="max-width:600px">
+        <input type="hidden" name="honeypot" class="hidden" placeholder="If you're a human being don't fill this field">
+        <input type="hidden" name="identity" id="identity"  value="Επικοινωνία">
+        <input type="hidden" name='token'    id="token"     value="Nosferatu used Obfuscate 5">
+        <input type="hidden" name="chat_id"  id="chat_id"   value="Lasombra used Obfuscate 4">
+        <input type="hidden" name="user_ip"  id="user_ip"   value="no_ip">
+		<div class="form-group mb-3 row">
+		    <label for="-2" class="col-md-5 col-form-label">Το Ονοματεπώνυμο σας</label>
+		        <div class="col-md-7">
+		            <input type="text" class="form-control" id="name" name="name" required>
+		            <small class="form-text text-muted"> Απαιτείται για να ξέρουμε με ποιον μιλάμε</small>
+		        </div>
+		</div>
+		<div class="form-group mb-3 row">
+		    <label for="-telegram-6" class="col-md-5 col-form-label">Telegram</label>
+				<div class="col-md-7">
+				    <input type="text" class="form-control" id="telegram" name="telegram" required>
+				    <small class="form-text text-muted"> Απαιτείται. Το Telegram @username / Τηλέφωνο</small>
+				</div>
+		</div>
+		<div class="form-group mb-3 row">
+		    <label for="-email-4" class="col-md-5 col-form-label">Το Email σας</label>
+				<div class="col-md-7">
+				    <input type="email" class="form-control" id="email" name="email">
+				    <small class="form-text text-muted"> Δεν απαιτείται, σύντομα θα καταργηθεί η επικοινωνία με Email</small>
+				</div>
+		</div>
+	<hr class="bg-transparent border-0 py-1" />
+		<div class="form-group mb-3 row">
+		    <label for="-mac-address-11" class="col-md-5 col-form-label">Το μήνυμά σας</label>
+				<div class="col-md-7">
+				    <textarea class="form-control" id="comment" name="comment"></textarea>
+				</div>
+		</div>
+	<hr class="my-4" />
+		<div class="form-group mb-3 row">
+		    <label for="13" class="col-md-5 col-form-label"></label>
+				<div class="col-md-7">
+				    <button class="btn btn-primary" id="button" type="submit" onmouseup="noticeButton()" onclick=sendmessage()>Αποστολή</button>
+				</div>
+		</div>
+		<!--
+		<div align="center" id="someHiddenDiv" style="display: none;">Παρακαλώ περιμένετε...</div>
+		<div align="center" id="progress">Το μήνυμά σας εστάλει, θα σας ενημερώσουμε!</div>
+		-->
+    </form>
+</div>
+</body>
+</html>
