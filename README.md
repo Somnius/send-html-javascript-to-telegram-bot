@@ -1,9 +1,9 @@
 # Send HTML Form to Telegram
 Using Telegram BOT API, HTML forms, jQuery and JavaScript
 
-File jq.html is the first version that uses form input field that are hidden for token and chan_id variables
+File [jq.html](https://github.com/Somnius/send-html-javascript-to-telegram-bot/blob/main/jq.html) is the first version that uses form input field that are hidden for token and chan_id variables
 
-File jqo.html uses the function for static variables
+File [jqo.html](https://github.com/Somnius/send-html-javascript-to-telegram-bot/blob/main/jqo.html) uses the function for static variables
 
 Both use bootstrap for the nice looking form and jquery for the scripts
 
