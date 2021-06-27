@@ -7,6 +7,8 @@ File [jqo.html](https://github.com/Somnius/send-html-javascript-to-telegram-bot/
 
 Both use bootstrap for the nice looking form and jquery for the scripts
 
+![Image of the Form in Action](https://i.imgur.com/o1W6HMX.png)
+
 Haven't had the change to make it work over IPFS yet, it doesn't reply with telegram message. While being hosted on a normal webserver it posts telegram message as expected.
 
 I need to better implement all elements into one file, while being obfuscated using [obfuscator.io](https://obfuscator.io)
